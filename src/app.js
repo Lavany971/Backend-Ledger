@@ -20,8 +20,12 @@ const transactionRoutes = require('./routes/transaction.routes')
 /**
  * - API Routes
  */
+app.get('/', (req, res) => {
+    res.send('Backend Ledger API is running');
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/accounts', accountRoutes);
-app.use('/api/transactions',transactionRoutes)
+app.use('/api/transactions', transactionRoutes)
 
 module.exports = app;
