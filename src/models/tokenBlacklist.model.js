@@ -10,7 +10,7 @@ const tokenBlacklistSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-        expires: '5d' // Automatically remove blacklisted tokens after 5 days (matching JWT expiry)
+        expires: '5d'
     }
 }, {
     timestamps: true
